@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Potenza - Job Application Form Wizard with Resume upload and Branch feature">
+    <meta name="author" content="Ansonika">
+    <title>BESEVIC Application Form</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+	
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	
+</head>
+
+<body>
+	
+	
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a href="#" class="animated_link">Section (A)</a></li>
+			<li><a href="#" class="animated_link">Section (B)</a></li>
+			<li><a href="#" class="animated_link">Section (C)</a></li>
+			<li><a href="#" class="animated_link">File Attachment</a></li>
+			<li><a href="#" class="animated_link">About Us</a></li>
+			<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+			<li><a href="https://besevirc.com" class="animated_link" target="_parent">BESEVIC Website</a></li>
+		</ul>
+	</nav>
+	<!-- /menu -->
+	
+	<div class="container-fluid">
+	    <div class="row row-height">
+	        <div class="col-xl-4 col-lg-4 content-left">
+	            <div class="content-left-wrapper">
+	                <a href="index.html" id="logo"><img src="img/govt-logo.png" alt="" width="100" height="100"></a>
+	                <div id="social">
+	                    <ul>
+	                        <li><a href="https://www.facebook.com/besevirc/"><i class="fa fa-facebook"></i></a></li>
+	                        <li><a href="https://twitter.com/Besevic2"><i class="fa fa-twitter"></i></a></li>
+	                        <li><a href="https://www.youtube.com/channel/UC0RNNVYi8DoODZePQkTSAWQ"><i class="fa fa-youtube"></i></a></li>
+	                        <li><a href="https://www.linkedin.com/company/besevirc/"><i class="fa fa-linkedin"></i></a></li>
+	                    </ul>
+	                </div>
+	                <!-- /social -->
+	                <div>
+	                    <figure><img src="img/logo.png" alt="" class="img-fluid" width="270" height="270"></figure>
+	                    <h2>Instructions</h2>
+						<ul>
+	                    <li>1.Applicants must have a PC and Smart Phone.</li>
+        				<li>2. Ability to work and deliver without or minimal supervision.</li>
+        				<li>3. Engagement is three months and facilitator will train and conduct Certification Examination in Line with NBTE NICS for the participants.</li>
+        				<li>4. Facilator must possess Previous ICT and Digital literacy training knowledge as teacher, lecturer or computer instructor which is a very important requirement.</li>
+       					 <li>5. Payment is upon completion of the assignment and successful submission of report each month.</li> 
+       					 <li>6. Training time 3 hrs / 3 days a week (Wednesday, Thursday and Fridays)</li>
+        				<li>7. Manuals for training is made available for facilitators.</li>
+        				<li>8. The BESEVIC project is supported by FMoE, UNICEF, GPE & Gamint Corporate Ltd</li>
+						</ul>
+						<a href="https://besevirc.com" class="btn_1 rounded yellow" target="_parent">BESEVIC Website</a>
+	                    <a href="#start" class="btn_1 rounded mobile_btn yellow">Apply Now!</a>
+	                </div>
+	                <div class="copy">© 2022 BESEVIC</div>
+	            </div>
+	            <!-- /content-left-wrapper -->
+	        </div>
+	        <!-- /content-left -->
+	        <div class="col-xl-8 col-lg-8 content-right" id="start">
+	            <div id="wizard_container">
+	                <div id="top-wizard">
+	                    <span id="location"></span>
+	                    <div id="progressbar"></div>
+	                </div>
+	                <!-- /top-wizard -->
+	                <form id="wrapped" method="post" enctype="multipart/form-data">
+	                    <input id="website" name="website" type="text" value="">
+	                    <!-- Leave for security protection, read docs for details -->
+	                    <div id="middle-wizard">
+	                        <div class="step">
+	                            <h2 class="section_title">Section (A)</h2>
+	                            <h3 class="main_question">Personal Information</h3>
+	                            <div class="form-group add_top_30">
+	                                <label for="name">First and Last Name</label>
+	                                <input type="text" name="name" id="name" class="form-control required" onchange="getVals(this, 'name_field');">
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="email">Email Address</label>
+	                                <input type="email" name="email" id="email" class="form-control required" onchange="getVals(this, 'email_field');">
+	                            </div>
+
+								<div class="form-group add_bottom_30">
+									<label>State of Origin</label>
+									<div class="styled-select">
+										<select class="form-control required" id="start_availability_full_time" name="start_availability_full_time">
+											<option value="">Select State of Origin</option>
+											<option value="1">Abia </option>
+											<option value="2">Adamawa </option>
+											<option value="3">Akwa Ibom </option>
+											<option value="4">Anambra </option>
+											<option value="5">Bauchi </option>
+											<option value="6">Bayelsa </option>
+											<option value="7">Benue </option>
+											<option value="8">Borno </option>
+											<option value="9">Cross River </option>
+											<option value="10">Delta </option>
+											<option value="11">Ebonyi </option>
+											<option value="12">Edo </option>
+											<option value="13">Ekiti </option>
+											<option value="14">Enugu </option>
+											<option value="37">FCT</option>
+											<option value="15">Gombe </option>
+											<option value="16">Imo </option>
+											<option value="17">Jigawa </option>
+											<option value="18">Kaduna </option>
+											<option value="19">Kano </option>
+											<option value="20">Katsina </option>
+											<option value="21">Kebbi </option>
+											<option value="22">Kogi </option>
+											<option value="23">Kwara </option>
+											<option value="24">Lagos </option>
+											<option value="25">Nasarawa </option>
+											<option value="26">Niger </option>
+											<option value="27">Ogun </option>
+											<option value="28">Ondo </option>
+											<option value="29">Osun </option>
+											<option value="30">Oyo </option>
+											<option value="31">Plateau </option>
+											<option value="32">Rivers </option>
+											<option value="33">Sokoto </option>
+											<option value="34">Taraba </option>
+											<option value="35">Yobe </option>
+											<option value="36">Zamfara </option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group add_bottom_30">
+									<label>Local Government of Residence </label>
+									<div class="styled-select">
+										<select class="form-control required" id="start_availability_full_time" name="start_availability_full_time">
+											<option value="">Select LGA of Residence</option>
+											<option value="Ado">Ado</option>
+											<option value="Agatu">Agatu</option>
+											<option value="Apa">Apa</option>
+											<option value="Buruku">Buruku</option>
+											<option value="Gboko">Gboko</option>
+											<option value="Guma">Guma</option>
+											<option value="Gwer East">Gwer East</option>
+											<option value="Gwer West">Gwer West</option>
+											<option value="Katsina-ala">Katsina-Ala</option>
+											<option value="Konshisha">Konshisha</option>
+											<option value="Kwande">Kwande</option>
+											<option value="Logo">Logo</option>
+											<option value="Makurdi">Makurdi</option>
+											<option value="Obi">Obi</option>
+											<option value="Ogbadibo">Ogbadibo</option>
+											<option value="Ohimini">Ohimini</option>
+											<option value="Oju">Oju</option>
+											<option value="Okpokwu">Okpokwu</option>
+											<option value="Otukpo">Otukpo</option>
+											<option value="Tarka">Tarka</option>
+											<option value="Ukum">Ukum</option>
+											<option value="Ushongo">Ushongo</option>
+											<option value="Vandeikya">Vandeikya</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+	                                <label for="phone">Phone Number</label>
+	                                <input type="text" name="phone" id="phone" class="form-control required">
+	                            </div>
+								
+								<div class="form-group">
+	                                <label for="name">Home Address</label>
+	                                <input type="text" name="name" id="name" class="form-control required">
+	                            </div>
+
+								<label>Gender</label>
+								<div class="form-group radio_input">
+								    <label class="container_radio mr-3">Male
+								        <input type="radio" name="gender" value="Male" class="required">
+								        <span class="checkmark"></span>
+								    </label>
+								    <label class="container_radio">Female
+								        <input type="radio" name="gender" value="Female" class="required">
+								        <span class="checkmark"></span>
+								    </label>
+								</div>
+								<label for="birthday">Date of Birth</label>	
+								<input type="date" id="birthday" name="birthday">
+							    </div>
+	                        <!-- /step-->
+
+	                        <!-- /Start Branch ============================== -->
+	                        <div class="step" data-state="branchtype">
+	                            <h2 class="section_title">Section (B)</h2>
+	                            <h3 class="main_question">Educational Qualifications</h3>
+	                            <div class="form-group">
+	                                <label class="container_radio version_2">Degree
+	                                    <input type="radio" name="availability" value="Full-time" class="required">
+	                                    <span class="checkmark"></span>
+	                                </label>
+	                                <label class="container_radio version_2">HND
+	                                    <input type="radio" name="availability" value="Full-time" class="required">
+	                                    <span class="checkmark"></span>
+	                                </label>
+	                                <label class="container_radio version_2">ND
+	                                    <input type="radio" name="availability" value="Full-time" class="required">
+	                                    <span class="checkmark"></span>
+	                                </label> 
+									 <label class="container_radio version_2">NCE
+	                                    <input type="radio" name="availability" value="Full-time" class="required">
+	                                    <span class="checkmark"></span>
+	                                </label>
+	                            </div>
+	                          
+
+								<div class="form-group add_bottom_30">
+									<label>Select LGA of your choice for the Training </label>
+									<label for="start_availability_full_time">Choose your LGA for the Training</label>
+									<div class="styled-select">
+										<select class="form-control required" id="start_availability_full_time" name="start_availability_full_time">
+											<option value="">Select LGA of your choice for the Training</option>
+											<option value="Ado">Ado</option>
+											<option value="Agatu">Agatu</option>
+											<option value="Apa">Apa</option>
+											<option value="Buruku">Buruku</option>
+											<option value="Gboko">Gboko</option>
+											<option value="Guma">Guma</option>
+											<option value="Gwer East">Gwer East</option>
+											<option value="Gwer West">Gwer West</option>
+											<option value="Katsina-ala">Katsina-Ala</option>
+											<option value="Konshisha">Konshisha</option>
+											<option value="Kwande">Kwande</option>
+											<option value="Logo">Logo</option>
+											<option value="Makurdi">Makurdi</option>
+											<option value="Obi">Obi</option>
+											<option value="Ogbadibo">Ogbadibo</option>
+											<option value="Ohimini">Ohimini</option>
+											<option value="Oju">Oju</option>
+											<option value="Okpokwu">Okpokwu</option>
+											<option value="Otukpo">Otukpo</option>
+											<option value="Tarka">Tarka</option>
+											<option value="Ukum">Ukum</option>
+											<option value="Ushongo">Ushongo</option>
+											<option value="Vandeikya">Vandeikya</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group add_bottom_30 add_top_20">
+	                                <label>Upload CV (Not more than 3pages)<br><small>(File accepted: .pdf, .doc/docx - Max file size: 10 MB)</small></label>
+	                                <div class="fileupload">
+	                                    <input type="file" name="fileupload" accept=".pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="required">
+	                                </div>
+	                            </div>
+								
+								<div class="form-group add_bottom_30 add_top_20">
+	                                <label>Upload passport photograph <br><small>(File accepted: .jpeg, .jpg, .png - Max file size: 15 MB)</small></label>
+	                                <div class="fileupload">
+	                                    <input type="file" name="fileupload" accept=".pdf, .jpg, .jpeg, .png, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="required">
+	                                </div>
+	                            </div>
+								
+								<div class="form-group add_bottom_30 add_top_20">
+	                                <label>Upload Legal Means of Identification<br><small>(File accepted: .jpeg, .jpg, .png - Max file size: 15 MB)</small></label>
+	                                <div class="fileupload">
+	                                    <input type="file" name="fileupload" accept=".pdf, .jpg, .jpeg, .png, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" class="required">
+	                                </div>
+	                            </div>
+
+								<h2 class="section_title">Section (C)</h2>
+	                            <h3 class="main_question">Next of Kin / Referee</h3>
+								
+								<div class="form-group">
+								  <label for="name">Next of Kin Name</label>
+	                                <input type="text" name="name" id="name" class="form-control required">
+	                            </div>
+								
+								<div class="form-group">
+								  <label for="name">Address of Next of Kin</label>
+	                                <input type="text" name="name" id="name" class="form-control required">
+	                            </div>
+								
+								<div class="form-group">
+								  <label for="phone">Next of Kin Phone Number</label>
+	                                <input type="text" name="phone" id="phone" class="form-control required">
+	                            </div>
+
+								<label>Referee</label>
+								<div class="form-group">
+									<label for="name">Name of Referee</label>
+									  <input type="text" name="name" id="name" class="form-control required">
+								  </div>
+								  <div class="form-group">
+									<label for="name">Referee Address</label>
+									  <input type="text" name="name" id="name" class="form-control required">
+								  </div>
+								  <div class="form-group">
+									<label for="phone">Referee Phone Number</label>
+									  <input type="text" name="phone" id="phone" class="form-control required">
+								  </div>
+
+								</div>
+
+	                        <!-- /Work Availability > Full-time ============================== -->
+	                        <div class="branch" id="Full-time">
+	                            <div class="step" data-state="end">
+	                                <h2 class="section_title">Section (D)</h2>
+	                                <h3 class="main_question">Using a scale of 10% - 100%, rate your proficiency in the following areas:</h3>
+	                                <div class="form-group add_bottom_30">
+	                                    <label>Computer Appreciation</label>
+	                                    <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div> 
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>Computer Network</label>
+	                                     <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>ICT Skills</label>
+	                                    <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+
+									<div class="form-group add_bottom_30">
+	                                    <label>Cyber Security</label>
+	                                  	 <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>Multimedia Knowledge</label>
+	                                    <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>Media Content Production</label>
+	                                   <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>e-Learning</label>
+	                                    <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+									
+									<div class="form-group add_bottom_30">
+	                                    <label>Assessment Technology</label>
+	                                    <div class="styled-select">
+	                                        <select class="form-control required" id="minimum_salary_full_time" name="minimum_salary_full_time">
+	                                            <option value="">Choose a range</option>
+	                                            <option value="10-20%">10-20%</option>
+	                                            <option value="20-30%">20-30%</option>
+	                                            <option value="30-40%">30-40%k</option>
+	                                            <option value="40-50%">40-50%</option>
+	                                            <option value="50-60%">50-60%</option>
+	                                            <option value="60-70%">60-70%</option>
+	                                            <option value="70-80%">70-80%</option>
+	                                            <option value="80-90%">80-90%</option>
+	                                            <option value="90-100%">90-100%</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+
+                            </div>
+	                        </div>
+	                        <!-- /step-->
+
+	                        
+
+	                        <div class="submit step" id="end">
+	                            <div class="summary">
+	                                <div class="wrapper">
+	                                    <h3>Thank your for your time <br><span id="name_field"></span>!</h3>
+										<p>Your response has been recorded.</p>
+	                                    <p>We will contat you shorly at <strong id="email_field"></strong></p>
+	                                </div>
+	                                <div class="text-center">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- /step last-->
+
+	                    </div>
+	                    <!-- /middle-wizard -->
+	                    <div id="bottom-wizard">
+	                        <button type="button" name="backward" class="backward">Prev</button>
+	                        <button type="button" name="forward" class="forward">Next</button>
+	                        <button type="submit" name="process" class="submit">Submit</button>
+	                    </div>
+	                    <!-- /bottom-wizard -->
+	                </form>
+	            </div>
+	            <!-- /Wizard container -->
+	        </div>
+	        <!-- /content-right-->
+	    </div>
+	    <!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/common_functions.js"></script>
+	<script src="js/file-validator.js"></script>
+	
+
+	<!-- Wizard script-->
+	<script src="js/func_1.js"></script>
+	
+
+</body>
+</html>
